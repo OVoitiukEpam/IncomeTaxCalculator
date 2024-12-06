@@ -13,7 +13,9 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowSpecificOrigin",
-        builder => builder.WithOrigins("https://127.0.0.1:49751")
+        builder => builder.WithOrigins(
+            "https://income-tax-calculator.azurewebsites.net",
+            "https://127.0.0.1:49751")
         .AllowAnyMethod()
         .AllowAnyHeader());
 });
