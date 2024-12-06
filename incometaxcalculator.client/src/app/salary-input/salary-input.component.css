@@ -1,0 +1,11 @@
+/* src/app/salary-input/salary-input.component.css */
+
+.full-width {
+    width: 100%;
+  }
+  
+  .salary-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }

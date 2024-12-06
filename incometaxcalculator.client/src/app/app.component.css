@@ -12,3 +12,10 @@ th, td {
 table {
     margin: 0 auto;
 }
+
+  
+  #outer {
+    width:100%;
+    display: flex;
+    justify-content: center;
+  }

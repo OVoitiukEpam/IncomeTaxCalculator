@@ -1,0 +1,18 @@
+<div>
+    <form [formGroup]="salaryForm" class="salary-form">
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Gross Annual Salary</mat-label>
+        <input matInput formControlName="grossSalary" required>
+        <mat-error *ngIf="grossSalary?.invalid && (grossSalary?.touched || grossSalary?.dirty)">
+          <span *ngIf="grossSalary?.errors?.['required']">Gross Annual Salary is required.</span>
+          <span *ngIf="grossSalary?.errors?.['pattern']">Must be a number.</span>
+        </mat-error>
+      </mat-form-field>
+  
+      <button mat-raised-button color="primary" (click)="calculate()" [disabled]="salaryForm.invalid || isProcessing" class="full-width">
+        Calculate
+      </button>
+  
+      <div *ngIf="isProcessing">Processing...</div>
+    </form>
+  </div>

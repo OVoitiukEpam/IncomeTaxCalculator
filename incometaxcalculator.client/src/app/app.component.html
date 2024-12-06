@@ -1,24 +1,16 @@
-<h1 id="tableLabel">Weather forecast</h1>
-
-<p>This component demonstrates fetching data from the server.</p>
-
-<p *ngIf="!forecasts"><em>Loading... Please refresh once the ASP.NET backend has started. See <a href="https://aka.ms/jspsintegrationangular">https://aka.ms/jspsintegrationangular</a> for more details.</em></p>
-
-<table *ngIf="forecasts">
-    <thead>
-        <tr>
-            <th>Date</th>
-            <th>Temp. (C)</th>
-            <th>Temp. (F)</th>
-            <th>Summary</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let forecast of forecasts">
-            <td>{{ forecast.date }}</td>
-            <td>{{ forecast.temperatureC }}</td>
-            <td>{{ forecast.temperatureF }}</td>
-            <td>{{ forecast.summary }}</td>
-        </tr>
-    </tbody>
-</table>
+<div id="outer">
+    <div id="inner">
+<div fxLayout="row" fxLayoutAlign="center center" style=" padding-top: 20px; min-height: 90vh; max-width: 90vh;">
+    <mat-card fxFlex md="50%" fxFlex.xs="100%">
+      <mat-card-content>
+        <h1 id="tableLabel">Income Tax Calculator</h1>
+        <p style="padding-bottom: 15px;">UK income tax is calculated according to tax bands. </p>
+      </mat-card-content>
+      <mat-card-content>
+        <app-salary-input (resultChange)="setResult($event)"></app-salary-input>
+        <app-salary-result [result]="result"></app-salary-result>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+</div>
