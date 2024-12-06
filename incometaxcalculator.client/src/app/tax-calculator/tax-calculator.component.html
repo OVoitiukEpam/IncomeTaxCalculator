@@ -1,0 +1,11 @@
+<!-- tax-calculator.component.html -->
+<div>
+  <input type="number" [formControl]="grossSalaryControl" placeholder="Enter Gross Annual Salary">
+  <button (click)="calculateTax()">Calculate</button>
+
+  <div *ngIf="results">
+    <p>Gross Annual Salary: £ {{ results.grossSalary }}</p>
+    <p>Net Annual Salary: £ {{ results.netSalary }}</p>
+    <p>Annual Tax Paid: £ {{ results.tax }}</p>
+  </div>
+</div>
